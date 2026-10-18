@@ -23,10 +23,10 @@ import "./App.css";
 import { notifications } from "./data/notifications";
 import ownerPhoto from "./image/raj.jpeg";
 
-const PHONE = "8621453345";
+const PHONE = "9621453345";
 
 const WHATSAPP =
-  "https://wa.me/918621453345?text=" +
+  `https://wa.me/91${PHONE}?text=` +
   encodeURIComponent("नमस्ते, मुझे ऑनलाइन सेवा के बारे में जानकारी चाहिए।");
 
 const services = [

@@ -30,4 +30,4 @@ Notifications are maintained in the source file. There is no admin panel, databa
 
 ## Content notes
 
-The site lists the services shown in the supplied source code and does not claim government authorization, guaranteed approval, shop hours, prices, or unconfirmed services. Contact links use +91 8621453345, and the supplied address is Malhanpar, Urwa Road, Gorakhpur, 273403, Uttar Pradesh.
+The site lists the services shown in the supplied source code and does not claim government authorization, guaranteed approval, shop hours, prices, or unconfirmed services. Contact links use +91 9621453345, and the supplied address is Malhanpar, Urwa Road, Gorakhpur, 273403, Uttar Pradesh.
