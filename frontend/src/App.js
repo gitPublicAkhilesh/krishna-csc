@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 import "./App.css";
 import { notifications } from "./data/notifications";
+import ownerPhoto from "./image/raj.jpeg";
 
 const PHONE = "8621453345";
 
@@ -296,34 +297,28 @@ function App() {
               className="hero-card"
               data-testid="hero-service-card"
             >
-              <div className="card-orbit orbit-one" />
-              <div className="card-orbit orbit-two" />
-
               <div className="hero-card-top">
-                <span className="live-dot" />
-                आपका डिजिटल साथी
+                <span className="live-dot" aria-hidden="true" />
+                <span>आपका डिजिटल साथी</span>
               </div>
 
-              <div className="hero-card-icon">
-                <Smartphone size={42} />
-              </div>
+              <div className="owner-profile">
+                <div className="owner-photo-frame">
+                  <img
+                    src={ownerPhoto}
+                    alt="Rajkumar Prajapati, owner of Shri Krishna Mobile & CSC Seva Kendra"
+                  />
+                </div>
 
-              <h2>
-                काम आसान,
-                <br />
-                <span>भरोसा पक्का।</span>
-              </h2>
-
-              <p>One trusted place for everyday digital services.</p>
-
-              <div className="mini-stat">
-                <strong>10+</strong>
-
-                <span>
-                  सेवाएँ उपलब्ध
-                  <br />
-                  <small>Services available</small>
-                </span>
+                <div className="owner-details">
+                  <h2 className="owner-name">Rajkumar Prajapati</h2>
+                  <p className="owner-designation">
+                    Owner | Shri Krishna Mobile &amp; CSC Seva Kendra
+                  </p>
+                  <p className="owner-description">
+                    आपकी सभी ऑनलाइन सेवाओं के लिए विश्वसनीय सहायता।
+                  </p>
+                </div>
               </div>
             </div>
           </div>
