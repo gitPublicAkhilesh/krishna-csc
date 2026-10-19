@@ -20,6 +20,7 @@ import {
   X,
 } from "lucide-react";
 import "./App.css";
+import "./notifications.css";
 import { notifications } from "./data/notifications";
 import ownerPhoto from "./image/raj.png";
 
@@ -143,11 +144,7 @@ function NotificationBar() {
         <div className="notice-track">
           {[...items, ...items].map((item, index) => (
             <span
-              className={
-                item.important
-                  ? "notice-item important"
-                  : "notice-item"
-              }
+              className={`notice-item${item.important ? " important" : ""}${item.blink ? " blinking" : ""}`}
               key={`${item.id}-${index}`}
             >
               <b>{item.title}</b> {item.message}

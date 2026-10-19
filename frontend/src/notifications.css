@@ -1,0 +1,21 @@
+.notice-item.blinking {
+  animation: notification-blink .5s ease-in-out infinite;
+}
+
+@keyframes notification-blink {
+  0%,
+  100% {
+    opacity: 1;
+    color: #c62828;
+  }
+  50% {
+    opacity: 0.72;
+    color: #f44336;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .notice-item.blinking {
+    animation: none;
+  }
+}
