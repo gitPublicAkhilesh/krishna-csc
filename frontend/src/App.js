@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 import "./App.css";
 import { notifications } from "./data/notifications";
-import ownerPhoto from "./image/raj.jpeg";
+import ownerPhoto from "./image/raj.png";
 
 const PHONE = "9621453345";
 
