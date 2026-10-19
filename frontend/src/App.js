@@ -28,7 +28,7 @@ const PHONE = "9621453345";
 
 const WHATSAPP =
   `https://wa.me/91${PHONE}?text=` +
-  encodeURIComponent("नमस्ते, मुझे ऑनलाइन सेवा के बारे में जानकारी चाहिए।");
+  encodeURIComponent("नमस्ते! 🙏 मुझे Passport/Pan कार्ड, ऑनलाइन फॉर्म और अन्य CSC सेवाओं के बारे में जानकारी चाहिए। कृपया सहायता करें।")
 
 const services = [
   {
@@ -540,7 +540,7 @@ function App() {
               </div>
 
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Malhanpar+Urwa+Road+Gorakhpur+273403"
+                href="https://www.google.com/maps?q=26.540054987803558,83.28643960003464"
                 target="_blank"
                 rel="noreferrer"
                 className="map-link"
