@@ -4,28 +4,132 @@
 @tailwind components;
 @tailwind utilities;
 
-body { margin: 0; font-family: Inter, "Noto Sans Devanagari", sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-::selection { background: #d4af37; color: #122b27; }
+:root {
+  --primary-color: #1b4d3e;
+  --secondary-color: #0f766e;
+  --accent-color: #d4af37;
+  --background-color: #f7f8f4;
+  --secondary-background-color: #e7f0e9;
+  --surface-color: #ffffff;
+  --text-color: #122b27;
+  --secondary-text-color: #5d6c68;
+  --button-background-color: var(--accent-color);
+  --button-text-color: #ffffff;
+  --header-background-color: #ffffff;
+  --footer-background-color: #102d28;
+  --border-color: #dce5df;
+  --hover-color: var(--secondary-color);
+  --notification-background-color: #e7f0e9;
+  --notification-border-color: #d1e1d5;
+  --notification-text-color: #34564c;
+  --notification-alert-color: #c62828;
+  --notification-alert-highlight-color: #f44336;
+  --whatsapp-color: #3ca76b;
+  --radius: 0.5rem;
+
+  --ink: var(--text-color);
+  --green: var(--primary-color);
+  --teal: var(--secondary-color);
+  --gold: var(--accent-color);
+  --cream: var(--background-color);
+  --line: var(--border-color);
+
+  --color-header-border: #e9efeb;
+  --color-accent-light: #f8df8b;
+  --color-muted: #73817d;
+  --color-body-strong: #50615c;
+  --color-muted-light: #9ba8a4;
+  --color-hero-gradient-start: #e7f0e8;
+  --color-hero-gradient-middle: #f8f8f0;
+  --color-hero-gradient-end: #eef4ed;
+  --color-hero-glow: #d6e7da;
+  --color-muted-heading: #75857f;
+  --color-body: #53645e;
+  --color-body-light: #7b8985;
+  --color-shadow: #193e3025;
+  --color-meta: #71807a;
+  --color-accent-transparent: #d4af3738;
+  --color-primary-outline-transparent: #a8d0b533;
+  --color-card-top: #d0e5d6;
+  --color-accent-bright: #f1cd5e;
+  --color-accent-gold: #edcb62;
+  --color-accent-soft: #efce68;
+  --color-green-light: #b7d0c1;
+  --color-green-line-transparent: #b6d2bd44;
+  --color-accent-highlight: #f1d273;
+  --color-green-pale: #d4e3d8;
+  --color-green-muted: #91b6a0;
+  --color-border-hover: #a8c5b4;
+  --color-card-shadow: #234a3c12;
+  --color-surface-green: #edf5ee;
+  --color-detail: #899691;
+  --color-arrow: #b5c3bc;
+  --color-white-transparent: #ffffff;
+  --color-green-soft: #b6d2bd;
+  --color-accent-pale: #e9c965;
+  --color-green-copy: #daeadc;
+  --color-green-copy-muted: #a9c2b0;
+  --color-green-outline: #bed5c3;
+  --color-white-border-transparent: #ffffff2e;
+  --color-accent-deep: #e5c762;
+  --color-contact-background: #f1f4ee;
+  --color-map-pattern: #ffffff;
+  --color-map-copy: #b7d2be;
+  --color-location-copy: #bfd4c3;
+  --color-footer-copy: #bbd0c2;
+  --color-footer-brand-muted: #94b5a5;
+  --color-footer-muted: #78988a;
+  --color-footer-link: #c9d9cd;
+  --color-footer-border-transparent: #ffffff1f;
+  --color-nav-shadow: #193e3014;
+  --color-nav-link-hover: #edf1ed;
+  --color-card-background: #123b30;
+  --color-accent-border-transparent: #d4af3780;
+  --color-card-shadow-strong: #123b3030;
+  --color-accent-shadow-transparent: #d4af3720;
+  --color-accent-outline-transparent: #d4af3755;
+  --color-white-overlay-transparent: #ffffff0a;
+  --color-white-glow: #ffffff22;
+  --color-accent-text: #f0d47e;
+  --color-location-accent: #ecd06e;
+  --color-photo-border: #e7c75f;
+  --color-photo-background: #f5f2e9;
+  --color-photo-shadow: #081f1b55;
+  --color-designation: #e8cf7d;
+  --color-landmark-label: #e3d89f;
+
+  --background: 40 20% 97%;
+  --foreground: 165 39% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 165 39% 12%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 165 39% 12%;
+  --primary: 156 48% 20%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 174 77% 26%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 140 26% 95%;
+  --muted-foreground: 162 7% 42%;
+  --accent: 45 65% 52%;
+  --accent-foreground: 165 39% 12%;
+  --destructive: 0 73% 46%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 145 16% 88%;
+  --input: 145 16% 88%;
+  --ring: 156 48% 20%;
+  --chart-1: 12 76% 61%;
+  --chart-2: 173 58% 39%;
+  --chart-3: 197 37% 24%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 27 87% 67%;
+}
+
+body { margin: 0; background: var(--background-color); color: var(--text-color); font-family: Inter, "Noto Sans Devanagari", sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+::selection { background: var(--accent-color); color: var(--text-color); }
 code { font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace; }
 
 @layer base {
-  :root {
-    --background: 0 0% 100%; --foreground: 0 0% 3.9%; --card: 0 0% 100%; --card-foreground: 0 0% 3.9%;
-    --popover: 0 0% 100%; --popover-foreground: 0 0% 3.9%; --primary: 0 0% 9%; --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%; --secondary-foreground: 0 0% 9%; --muted: 0 0% 96.1%; --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%; --accent-foreground: 0 0% 9%; --destructive: 0 84.2% 60.2%; --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%; --input: 0 0% 89.8%; --ring: 0 0% 3.9%;
-    --chart-1: 12 76% 61%; --chart-2: 173 58% 39%; --chart-3: 197 37% 24%; --chart-4: 43 74% 66%; --chart-5: 27 87% 67%; --radius: 0.5rem;
-  }
-  .dark {
-    --background: 0 0% 3.9%; --foreground: 0 0% 98%; --card: 0 0% 3.9%; --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%; --popover-foreground: 0 0% 98%; --primary: 0 0% 98%; --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%; --secondary-foreground: 0 0% 98%; --muted: 0 0% 14.9%; --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%; --accent-foreground: 0 0% 98%; --destructive: 0 62.8% 30.6%; --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%; --input: 0 0% 14.9%; --ring: 0 0% 83.1%; --chart-1: 220 70% 50%; --chart-2: 160 60% 45%; --chart-3: 30 80% 55%; --chart-4: 280 65% 60%; --chart-5: 340 75% 55%;
-  }
-  * { @apply border-border; }
-  body { @apply bg-background text-foreground; }
+  * { border-color: var(--border-color); }
   [data-debug-wrapper="true"] { display: contents !important; }
   [data-debug-wrapper="true"] > * { margin: inherit; padding: inherit; gap: inherit; border: inherit; }
 }
