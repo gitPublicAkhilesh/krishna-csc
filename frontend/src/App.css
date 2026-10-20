@@ -11,3 +11,4 @@
 .hero .hero-card .owner-description{margin:12px 0 0;color:#d4e3d8;font:500 13px/1.8 "Tiro Devanagari Hindi",serif}
 @media(max-width:600px){.hero .hero-card{width:min(100%,380px);padding:24px}.owner-profile{flex-direction:column;gap:17px;margin-top:20px}.owner-photo-frame{flex-basis:auto;width:min(100%,180px)}.owner-details{text-align:center}.hero .hero-card .owner-name{font-size:21px}}
 @media(max-width:800px){.text-button{min-height:44px;padding:12px 16px;touch-action:manipulation}}.trust-section:before{pointer-events:none}
+.location-landmark{display:flex;align-items:flex-start;gap:8px;margin-top:13px;position:relative}.location-landmark>svg{flex:0 0 16px;margin-top:2px;color:#ecd06e}.location-landmark p{margin:0}.location-landmark strong{font-weight:600;color:#e3d89f}.location-landmark span{display:block;margin-top:3px;color:#bfd4c3}

@@ -2,12 +2,22 @@ import { useMemo, useState } from "react";
 import {
   ArrowRight,
   Award,
+  Banknote,
   Bell,
+  BookOpenText,
+  BriefcaseBusiness,
   Check,
   ChevronDown,
+  ClipboardList,
   FileCheck2,
+  Fingerprint,
   Globe2,
+  GraduationCap,
+  HandCoins,
+  HardHat,
   Headphones,
+  HeartPulse,
+  IdCard,
   Landmark,
   MapPin,
   Menu,
@@ -16,7 +26,11 @@ import {
   ShieldCheck,
   Smartphone,
   Sparkles,
+  Sprout,
+  Ticket,
+  Tv,
   UserRound,
+  Zap,
   X,
 } from "lucide-react";
 import "./App.css";
@@ -90,6 +104,96 @@ const services = [
     hindi: "लॉगिन व फॉर्म सहायता",
     english: "Login & Form Assistance",
     detail: "Step-by-step guidance",
+  },
+  {
+    icon: GraduationCap,
+    hindi: "छात्रवृत्ति फॉर्म सहायता",
+    english: "Scholarship Form Assistance",
+    detail: "छात्रवृत्ति आवेदन फॉर्म भरना",
+  },
+  {
+    icon: BriefcaseBusiness,
+    hindi: "सरकारी नौकरी भर्ती फॉर्म",
+    english: "Government Job Vacancy Forms",
+    detail: "नई सरकारी नौकरी एवं भर्ती के ऑनलाइन फॉर्म",
+  },
+  {
+    icon: IdCard,
+    hindi: "राशन कार्ड सेवाएँ",
+    english: "Ration Card Services",
+    detail: "नए सदस्य का नाम जोड़ना और अन्य अपडेट",
+  },
+  {
+    icon: HandCoins,
+    hindi: "वृद्धावस्था पेंशन सहायता",
+    english: "Old Age Pension Assistance",
+    detail: "पेंशन की जानकारी, स्टेटस चेक और उपलब्ध सहायता",
+  },
+  {
+    icon: Fingerprint,
+    hindi: "AEPS नकद निकासी",
+    english: "AEPS Cash Withdrawal",
+    detail: "आधार एवं फिंगरप्रिंट से निकासी, जहाँ अधिकृत सेवा उपलब्ध हो",
+  },
+  {
+    icon: BookOpenText,
+    hindi: "खतौनी एवं भूलेख सेवाएँ",
+    english: "Khatauni / Land Record Services",
+    detail: "भूलेख रिकॉर्ड खोजना, निकालना और प्रिंट करना",
+  },
+  {
+    icon: HeartPulse,
+    hindi: "आयुष्मान कार्ड आवेदन",
+    english: "Ayushman Card Application",
+    detail: "आयुष्मान कार्ड के लिए आवेदन सहायता",
+  },
+  {
+    icon: Ticket,
+    hindi: "यात्रा एवं टिकट बुकिंग",
+    english: "Travel & Ticket Booking",
+    detail: "यात्रा और टिकट बुकिंग में सहायता",
+  },
+  {
+    icon: Banknote,
+    hindi: "बैंक मनी ट्रांसफर",
+    english: "Bank Money Transfer",
+    detail: "बैंक मनी ट्रांसफर में सहायता",
+  },
+  {
+    icon: ClipboardList,
+    hindi: "परीक्षा एवं दस्तावेज़ सेवाएँ",
+    english: "Exam & Document Services",
+    detail: "परीक्षा पंजीकरण, एडमिट कार्ड, फोटोकॉपी, प्रिंट और स्कैन",
+  },
+  {
+    icon: Zap,
+    hindi: "बिजली बिल भुगतान",
+    english: "Electricity Bill Payment",
+    detail: "बिजली बिल भुगतान सहायता",
+  },
+  {
+    icon: Smartphone,
+    hindi: "मोबाइल रिचार्ज",
+    english: "Mobile Recharge",
+    detail: "मोबाइल रिचार्ज सहायता",
+  },
+  {
+    icon: Tv,
+    hindi: "DTH रिचार्ज",
+    english: "DTH Recharge",
+    detail: "DTH रिचार्ज सहायता",
+  },
+  {
+    icon: Sprout,
+    hindi: "PM-किसान पंजीकरण",
+    english: "PM-Kisan Registration & Status",
+    detail: "पंजीकरण और स्टेटस चेक सहायता",
+  },
+  {
+    icon: HardHat,
+    hindi: "ई-श्रम पंजीकरण",
+    english: "e-Shram Registration & Card",
+    detail: "ई-श्रम पंजीकरण और कार्ड सहायता",
   },
 ];
 
@@ -537,6 +641,18 @@ function App() {
                   <br />
                   Uttar Pradesh, India
                 </p>
+
+                <div className="location-landmark">
+                  <MapPin size={16} aria-hidden="true" />
+                  <p>
+                    <strong>Landmark:</strong> अंधा बैंक से लगभग 100 मीटर आगे,
+                    बाईं तरफ।
+                    <span>
+                      <strong>English:</strong> Approximately 100 metres ahead
+                      of Andha Bank, on the left-hand side.
+                    </span>
+                  </p>
+                </div>
               </div>
 
               <a
