@@ -1,0 +1,87 @@
+.cloud-backdrop {
+  position: fixed;
+  z-index: 2;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.drifting-cloud {
+  position: absolute;
+  display: block;
+  opacity: 0.32;
+  will-change: transform;
+}
+
+.drifting-cloud > span {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #fff 0%, #fbfdff 46%, #e9f0f9 100%);
+  box-shadow: 0 9px 18px #ffffff55, inset 0 -4px 8px #b4c5dc77;
+}
+
+.drifting-cloud > span::before,
+.drifting-cloud > span::after {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  background: linear-gradient(180deg, #fff 0%, #fbfdff 58%, #eaf0f7 100%);
+}
+
+.drifting-cloud > span::before {
+  width: 42%;
+  height: 150%;
+  left: 18%;
+  bottom: 7%;
+}
+
+.drifting-cloud > span::after {
+  width: 32%;
+  height: 115%;
+  right: 17%;
+  bottom: 5%;
+}
+
+.drifting-cloud.large { width: clamp(165px, 22vw, 310px); height: clamp(38px, 5vw, 66px); }
+.drifting-cloud.medium { width: clamp(130px, 17vw, 240px); height: clamp(31px, 4vw, 54px); }
+.drifting-cloud.small { width: clamp(95px, 13vw, 180px); height: clamp(25px, 3.4vw, 44px); }
+
+.drifting-cloud.high { top: 10%; }
+.drifting-cloud.upper { top: 25%; }
+.drifting-cloud.middle { top: 43%; }
+.drifting-cloud.low { top: 62%; }
+.drifting-cloud.lower { top: 82%; }
+
+.left-to-right {
+  left: -35vw;
+  animation: cloud-drift-right 105s linear infinite;
+}
+
+.right-to-left {
+  right: -35vw;
+  animation: cloud-drift-left 122s linear infinite;
+}
+
+@keyframes cloud-drift-right {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(calc(100vw + 40vw), 0, 0); }
+}
+
+@keyframes cloud-drift-left {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(calc(-100vw - 40vw), 0, 0); }
+}
+
+@media (max-width: 700px) {
+  .drifting-cloud { opacity: 0.26; }
+  .drifting-cloud.high { top: 13%; }
+  .drifting-cloud.upper { top: 34%; }
+  .drifting-cloud.middle { top: 56%; }
+  .drifting-cloud.low { top: 76%; }
+  .drifting-cloud.lower { top: 91%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cloud-backdrop { display: none; }
+}

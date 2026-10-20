@@ -1,0 +1,53 @@
+.rain-backdrop {
+  position: fixed;
+  z-index: 2;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.rain-drop {
+  position: absolute;
+  top: -16vh;
+  left: var(--rain-x);
+  display: block;
+  width: 2px;
+  height: var(--rain-length);
+  opacity: var(--rain-opacity);
+  animation: rain-fall var(--rain-duration) linear var(--rain-delay) infinite;
+  will-change: transform;
+}
+
+.rain-streak {
+  position: absolute;
+  inset: 0;
+  display: block;
+  border-radius: 50%;
+  transform: rotate(var(--rain-angle));
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    #79b6dc88 24%,
+    #d6f0ffb5 72%,
+    #a7d9f377 100%
+  );
+  box-shadow: 0 0 3px #b6e3ff55;
+}
+
+@keyframes rain-fall {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(var(--rain-drift), 132vh, 0); }
+}
+
+@media (max-width: 900px) {
+  .rain-drop:nth-child(n + 43) { display: none; }
+}
+
+@media (max-width: 600px) {
+  .rain-drop:nth-child(n + 25) { display: none; }
+  .rain-drop { width: 1.5px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rain-backdrop { display: none; }
+}

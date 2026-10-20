@@ -37,6 +37,8 @@ import "./App.css";
 import "./notifications.css";
 import { notifications } from "./data/notifications";
 import GamesSection from "./components/GamesSection";
+import CloudBackdrop from "./components/CloudBackdrop";
+import RainEffect from "./components/RainEffect";
 import DiwaliEffects from "./components/DiwaliEffects";
 import ownerPhoto from "./image/raj.png";
 
@@ -326,6 +328,8 @@ function App() {
 
   return (
     <div className="site-shell">
+      <CloudBackdrop />
+      <RainEffect />
       <DiwaliEffects />
       <header className="site-header" data-testid="site-header">
         <div className="container header-inner">
