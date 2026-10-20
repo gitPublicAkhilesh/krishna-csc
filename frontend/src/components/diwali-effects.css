@@ -30,11 +30,216 @@
 .diwali-edge-light-five { top: 8px; left: 32%; animation-delay: -1.3s; }
 .diwali-edge-light-six { right: 28%; bottom: 8px; animation-delay: -2.4s; }
 
+.floating-diya {
+  position: fixed;
+  z-index: 2;
+  right: calc(20px + env(safe-area-inset-right, 0px));
+  bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: max-content;
+  max-width: calc(100vw - 24px);
+  min-height: 94px;
+  pointer-events: none;
+}
+
+.diwali-greeting {
+  position: relative;
+  z-index: 1;
+  padding: 9px 13px;
+  border: 1px solid #f5c15b99;
+  border-radius: 16px 16px 4px 16px;
+  background: linear-gradient(135deg, #fffdf4ed, #fff0d8ed);
+  box-shadow: 0 3px 14px #a64b1c24, inset 0 1px 0 #ffffff;
+  color: #ad4b16;
+  font: 800 14px/1.25 Poppins, "Trebuchet MS", sans-serif;
+  letter-spacing: 0.1px;
+  white-space: nowrap;
+  text-shadow: 0 1px 0 #ffdda0, 0 0 10px #ffcc6644;
+  animation: diwali-greeting-float 3.2s ease-in-out infinite;
+}
+
+.diwali-greeting::after {
+  position: absolute;
+  right: -4px;
+  bottom: 8px;
+  width: 8px;
+  height: 8px;
+  content: "";
+  transform: rotate(45deg);
+  border-right: 1px solid #f5c15b99;
+  border-top: 1px solid #f5c15b99;
+  background: #fff0d8;
+}
+
+.diya-illustration {
+  position: relative;
+  flex: 0 0 78px;
+  width: 78px;
+  height: 90px;
+  filter: drop-shadow(0 2px 5px #7a321b55);
+}
+
+.diya-rays {
+  position: absolute;
+  inset: 0 0 8px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, #fff07670 0%, #ffad354f 36%, #ff792222 58%, transparent 72%);
+  animation: diya-glow 2.4s ease-in-out infinite alternate;
+}
+
+.diya-sparkle {
+  position: absolute;
+  z-index: 3;
+  color: #ffbf35;
+  font: 700 12px/1 serif;
+  text-shadow: 0 0 7px #ffd554;
+  animation: diwali-twinkle 1.8s ease-in-out infinite alternate;
+}
+
+.diya-sparkle-one { top: 10px; left: 8px; }
+.diya-sparkle-two { top: 19px; right: 3px; animation-delay: -0.8s; }
+
+.diya-flame {
+  position: absolute;
+  z-index: 2;
+  left: 30px;
+  bottom: 40px;
+  width: 19px;
+  height: 30px;
+  border-radius: 55% 45% 52% 48% / 62% 56% 44% 38%;
+  transform: rotate(-45deg);
+  transform-origin: 50% 85%;
+  background: linear-gradient(145deg, #fffde0 2%, #fff171 28%, #ffc32f 58%, #ff7023 91%);
+  box-shadow: 0 0 9px 4px #ffbd3dba, 0 0 24px 10px #ff8c2780;
+  animation: diya-flame-flicker 0.95s ease-in-out infinite alternate;
+}
+
+.diya-flame>span {
+  position: absolute;
+  left: 6px;
+  bottom: 5px;
+  width: 8px;
+  height: 15px;
+  border-radius: 55% 45% 50% 50%;
+  transform: rotate(2deg);
+  background: linear-gradient(180deg, #fffef0, #fff8ae);
+  opacity: 0.9;
+}
+
+.diya-bowl {
+  position: absolute;
+  z-index: 3;
+  left: 7px;
+  bottom: 14px;
+  display: block;
+  width: 64px;
+  height: 29px;
+  clip-path: polygon(0 0, 100% 0, 87% 68%, 70% 88%, 50% 100%, 30% 88%, 13% 68%);
+  border-radius: 6px 6px 20px 20px;
+  background: linear-gradient(180deg, #ffe995 0%, #ffc34d 28%, #e97928 66%, #a9441e 100%);
+  box-shadow: inset 0 3px 4px #fff0b4, 0 4px 4px #7c321f55;
+}
+
+.diya-bowl::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 2px;
+  width: 60px;
+  height: 7px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #e6812e, #fff0aa 20%, #fff6cb 50%, #f6bd57 80%, #c55a24);
+  opacity: 0.9;
+}
+
+.diya-face {
+  position: absolute;
+  z-index: 4;
+  top: 11px;
+  left: 23px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.diya-face i {
+  display: block;
+  width: 3px;
+  height: 4px;
+  border-radius: 50%;
+  background: #79351f;
+}
+
+.diya-face b {
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  width: 9px;
+  height: 4px;
+  border-bottom: 1.5px solid #79351f;
+  border-radius: 0 0 50% 50%;
+}
+
+.diya-base {
+  position: absolute;
+  left: 19px;
+  bottom: 8px;
+  width: 40px;
+  height: 6px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #b45a21, #f4bf53 35%, #ffdf88 50%, #f4bf53 65%, #b45a21);
+}
+
 @keyframes diwali-twinkle {
   from { opacity: 0.2; transform: scale(0.75); }
   to { opacity: 0.85; transform: scale(1.25); }
 }
 
+@keyframes diya-flame-flicker {
+  from { opacity: 0.86; transform: rotate(-48deg) scale(0.94, 1.03); }
+  to { opacity: 1; transform: rotate(-41deg) scale(1.04, 0.96); }
+}
+
+@keyframes diya-glow {
+  from { opacity: 0.55; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1.08); }
+}
+
+@keyframes diwali-greeting-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+@media (max-width: 600px) {
+  .floating-diya {
+    right: calc(8px + env(safe-area-inset-right, 0px));
+    bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+    gap: 3px;
+  }
+
+  .diwali-greeting {
+    padding: 7px 8px;
+    border-radius: 13px 13px 4px 13px;
+    font-size: clamp(10px, 3.2vw, 13px);
+  }
+
+  .diya-illustration {
+    flex-basis: 66px;
+    width: 66px;
+    height: 78px;
+    transform: scale(0.86);
+    transform-origin: center right;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .diwali-effects { display: none; }
+  .diwali-edge-light,
+  .diya-rays,
+  .diya-flame,
+  .diya-sparkle,
+  .diwali-greeting {
+    animation: none;
+  }
 }

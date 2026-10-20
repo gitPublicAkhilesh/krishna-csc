@@ -184,14 +184,25 @@ export default function DiwaliEffects() {
   }, []);
 
   return createPortal(
-    <div className="diwali-effects" aria-hidden="true" data-testid="diwali-effects">
-      <canvas ref={canvasRef} className="diwali-effects-canvas" />
-      <span className="diwali-edge-light diwali-edge-light-one" />
-      <span className="diwali-edge-light diwali-edge-light-two" />
-      <span className="diwali-edge-light diwali-edge-light-three" />
-      <span className="diwali-edge-light diwali-edge-light-four" />
-      <span className="diwali-edge-light diwali-edge-light-five" />
-      <span className="diwali-edge-light diwali-edge-light-six" />
+    <div className="diwali-effects" data-testid="diwali-effects">
+      <canvas ref={canvasRef} className="diwali-effects-canvas" aria-hidden="true" />
+      <span className="diwali-edge-light diwali-edge-light-one" aria-hidden="true" />
+      <span className="diwali-edge-light diwali-edge-light-two" aria-hidden="true" />
+      <span className="diwali-edge-light diwali-edge-light-three" aria-hidden="true" />
+      <span className="diwali-edge-light diwali-edge-light-four" aria-hidden="true" />
+      <span className="diwali-edge-light diwali-edge-light-five" aria-hidden="true" />
+      <span className="diwali-edge-light diwali-edge-light-six" aria-hidden="true" />
+      <div className="floating-diya" data-testid="floating-diya">
+        <span className="diwali-greeting">🪔 Happy Diwali! ✨</span>
+        <div className="diya-illustration" aria-hidden="true">
+          <span className="diya-rays" />
+          <span className="diya-sparkle diya-sparkle-one">✦</span>
+          <span className="diya-sparkle diya-sparkle-two">✧</span>
+          <span className="diya-flame"><span /></span>
+          <span className="diya-bowl"><span className="diya-face"><i /><i /><b /></span></span>
+          <span className="diya-base" />
+        </div>
+      </div>
     </div>,
     document.body,
   );
