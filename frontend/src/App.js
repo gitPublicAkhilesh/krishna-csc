@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useLayoutEffect, useMemo, useState } from "react";
 import {
   ArrowRight,
   Award,
@@ -43,6 +43,19 @@ const PHONE = "9621453345";
 const WHATSAPP =
   `https://wa.me/91${PHONE}?text=` +
   encodeURIComponent("नमस्ते! 🙏 मुझे Passport/Pan कार्ड, ऑनलाइन फॉर्म और अन्य CSC सेवाओं के बारे में जानकारी चाहिए। कृपया सहायता करें।")
+
+// Edit this list to change theme order; IDs must match the CSS data-theme names.
+const THEME_ROTATION_ORDER = [
+  "green",
+  "orange",
+  "blue",
+  "purple",
+  "rose",
+  "ocean",
+  "forest",
+  "slate",
+];
+const THEME_ROTATION_INTERVAL_MS = 30 * 1000;
 
 const services = [
   {
@@ -264,6 +277,38 @@ function NotificationBar() {
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showAll, setShowAll] = useState(false);
+
+  useLayoutEffect(() => {
+    const root = document.documentElement;
+    let boundaryTimeout;
+
+    const updateTheme = () => {
+      root.dataset.theme =
+        THEME_ROTATION_ORDER[
+          Math.floor(Date.now() / THEME_ROTATION_INTERVAL_MS) %
+            THEME_ROTATION_ORDER.length
+        ];
+      const delay =
+        THEME_ROTATION_INTERVAL_MS -
+        (Date.now() % THEME_ROTATION_INTERVAL_MS);
+      boundaryTimeout = window.setTimeout(updateTheme, delay);
+    };
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") {
+        window.clearTimeout(boundaryTimeout);
+        updateTheme();
+      }
+    };
+
+    updateTheme();
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      window.clearTimeout(boundaryTimeout);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, []);
 
   const visibleServices = useMemo(
     () => (showAll ? services : services.slice(0, 6)),
