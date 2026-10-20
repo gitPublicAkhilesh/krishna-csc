@@ -645,11 +645,11 @@ function App() {
                 <div className="location-landmark">
                   <MapPin size={16} aria-hidden="true" />
                   <p>
-                    <strong>Landmark:</strong> अंधा बैंक से लगभग 100 मीटर आगे,
+                    <strong>Landmark:</strong> आंध्रा बैंक से लगभग 100 मीटर आगे,
                     बाईं तरफ।
                     <span>
                       <strong>English:</strong> Approximately 100 metres ahead
-                      of Andha Bank, on the left-hand side.
+                      of Andhra Bank, on the left-hand side.
                     </span>
                   </p>
                 </div>
