@@ -37,6 +37,7 @@ import "./App.css";
 import "./notifications.css";
 import { notifications } from "./data/notifications";
 import GamesSection from "./components/GamesSection";
+import DiwaliEffects from "./components/DiwaliEffects";
 import ownerPhoto from "./image/raj.png";
 
 const PHONE = "9621453345";
@@ -325,6 +326,7 @@ function App() {
 
   return (
     <div className="site-shell">
+      <DiwaliEffects />
       <header className="site-header" data-testid="site-header">
         <div className="container header-inner">
           <Logo />

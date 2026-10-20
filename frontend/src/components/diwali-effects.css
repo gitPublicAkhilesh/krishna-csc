@@ -1,0 +1,40 @@
+.diwali-effects {
+  position: fixed;
+  z-index: 20;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.diwali-effects-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.diwali-edge-light {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ffd45c;
+  box-shadow: 0 0 7px 2px #ffb52e, 0 0 15px 4px #ff7b2e66;
+  opacity: 0.42;
+  animation: diwali-twinkle 2.8s ease-in-out infinite alternate;
+}
+
+.diwali-edge-light-one { top: 13%; left: 8px; animation-delay: -0.4s; }
+.diwali-edge-light-two { top: 36%; right: 9px; animation-delay: -1.6s; }
+.diwali-edge-light-three { top: 62%; left: 11px; animation-delay: -2.1s; }
+.diwali-edge-light-four { top: 82%; right: 12px; animation-delay: -0.9s; }
+.diwali-edge-light-five { top: 8px; left: 32%; animation-delay: -1.3s; }
+.diwali-edge-light-six { right: 28%; bottom: 8px; animation-delay: -2.4s; }
+
+@keyframes diwali-twinkle {
+  from { opacity: 0.2; transform: scale(0.75); }
+  to { opacity: 0.85; transform: scale(1.25); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .diwali-effects { display: none; }
+}
