@@ -36,6 +36,7 @@ import {
 import "./App.css";
 import "./notifications.css";
 import { notifications } from "./data/notifications";
+import GamesSection from "./components/GamesSection";
 import ownerPhoto from "./image/raj.png";
 
 const PHONE = "9621453345";
@@ -539,6 +540,8 @@ function App() {
             </button>
           </div>
         </section>
+
+        <GamesSection />
 
         <section
           className="trust-section section-pad"

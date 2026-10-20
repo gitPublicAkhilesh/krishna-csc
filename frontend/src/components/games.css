@@ -1,0 +1,151 @@
+.games-section{background:var(--background-color)}
+.games-heading{margin-bottom:34px}
+.games-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.game-card,.game-panel{border:1px solid var(--border-color);border-radius:10px;background:var(--surface-color);box-shadow:0 10px 28px var(--color-card-shadow)}
+.game-card{display:flex;flex-direction:column;min-height:238px;padding:22px}
+.game-card-top{display:flex;align-items:center;justify-content:space-between}
+.game-card-icon{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:var(--color-surface-green);font-size:27px}
+.game-time{display:flex;align-items:center;gap:5px;color:var(--secondary-text-color);font:500 10px Poppins,sans-serif}
+.game-card h3,.game-panel-heading h3{margin:17px 0 8px;color:var(--text-color);font:600 19px Poppins,"Tiro Devanagari Hindi",serif}
+.game-panel-heading h3{margin-top:10px}
+.game-panel-heading h3 span{font:500 14px "Tiro Devanagari Hindi",serif;color:var(--secondary-color)}
+.game-card>p{margin:0;color:var(--secondary-text-color);font:500 12px/1.7 Poppins,sans-serif}
+.game-card .game-card-hindi{margin-top:4px;color:var(--color-detail);font-family:"Tiro Devanagari Hindi",serif}
+.game-play-button,.game-utility-button,.game-back-button,.game-close-button,.game-primary-button{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:0;border-radius:7px;background:var(--primary-color);color:var(--button-text-color);font:600 12px Poppins,sans-serif;cursor:pointer;transition:transform .18s,filter .18s;touch-action:manipulation}
+.game-play-button{align-self:flex-start;min-height:46px;margin-top:auto;padding:11px 15px}
+.game-play-button svg{transform:rotate(180deg)}
+.game-play-button:hover,.game-utility-button:hover,.game-back-button:hover,.game-close-button:hover,.game-primary-button:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.game-panel{padding:24px}
+.game-panel-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--border-color);padding-bottom:14px;margin-bottom:18px}
+.game-back-button{min-height:42px;padding:8px 10px;background:var(--color-surface-green);color:var(--primary-color)}
+.game-close-button{flex:0 0 42px;width:42px;height:42px;background:var(--color-surface-green);color:var(--primary-color)}
+.mini-game{max-width:760px;margin:0 auto}
+.game-toolbar{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:9px;margin-bottom:15px;color:var(--secondary-text-color);font:500 11px Poppins,sans-serif}
+.score-box{display:flex;flex-direction:column;min-width:70px;padding:6px 10px;border-radius:7px;background:var(--secondary-background-color);text-align:center}
+.score-box small{color:var(--secondary-text-color);font:500 9px Poppins,sans-serif}
+.score-box strong{color:var(--text-color);font:700 15px Poppins,sans-serif}
+.game-level-control{display:flex;align-items:center;gap:6px;color:var(--secondary-text-color);font:500 11px Poppins,sans-serif}
+.game-level-control select{min-height:40px;padding:6px 9px;border:1px solid var(--border-color);border-radius:6px;background:var(--surface-color);color:var(--text-color);font:500 12px Poppins,sans-serif}
+.game-instruction{margin:0 0 12px;text-align:center;color:var(--secondary-text-color);font:500 12px/1.6 Poppins,"Tiro Devanagari Hindi",sans-serif}
+.game-actions{display:flex;justify-content:center;gap:8px;margin-top:12px}
+.game-utility-button{min-height:44px;padding:9px 14px;background:var(--color-surface-green);color:var(--primary-color)}
+.game-primary-button{min-height:48px;padding:10px 17px}
+.game-overlay{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:18px;background:color-mix(in srgb,var(--surface-color) 90%,transparent);text-align:center;color:var(--text-color)}
+.game-overlay>strong{font:700 clamp(17px,4.5vw,23px)/1.4 Poppins,"Tiro Devanagari Hindi",sans-serif}
+.game-overlay>span{font:500 12px/1.6 Poppins,"Tiro Devanagari Hindi",sans-serif;color:var(--secondary-text-color)}
+.game-overlay .game-funny-result{font-weight:700;color:var(--primary-color)}
+
+.samosa-toolbar{justify-content:center}
+.samosa-board-wrap{position:relative;overflow:hidden;border:1px solid var(--border-color);border-radius:12px;background:var(--secondary-background-color)}
+.samosa-board{display:block;width:100%;height:clamp(250px,50vw,360px);touch-action:none;user-select:none}
+.game-touch-controls{display:flex;justify-content:center;gap:10px;margin-top:10px}
+.game-touch-controls button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:125px;min-height:50px;padding:9px 14px;border:1px solid var(--border-color);border-radius:8px;background:var(--color-surface-green);color:var(--primary-color);font:600 12px Poppins,sans-serif;touch-action:manipulation}
+
+.murgi-board-wrap,.balance-board-wrap,.chai-rush-board-wrap{position:relative;overflow:hidden;border:1px solid var(--border-color);border-radius:12px;background:var(--secondary-background-color)}
+.murgi-board,.balance-board,.chai-rush-board{display:block;width:100%;height:clamp(250px,50vw,360px)}
+.murgi-board{touch-action:none;user-select:none;cursor:crosshair}
+.balance-meter{height:12px;overflow:hidden;border:1px solid var(--border-color);border-radius:999px;background:var(--secondary-background-color)}
+.balance-meter>span{display:block;height:100%;border-radius:inherit;background:var(--primary-color);transition:width .12s linear}
+.balance-controls,.chai-lane-controls{display:flex;justify-content:center;gap:10px;margin-top:10px}
+.balance-controls button,.chai-lane-controls button{display:inline-flex;align-items:center;justify-content:center;gap:8px;flex:1;max-width:220px;min-height:52px;padding:9px 14px;border:1px solid var(--border-color);border-radius:8px;background:var(--color-surface-green);color:var(--primary-color);font:600 13px Poppins,sans-serif;touch-action:none;user-select:none}
+.balance-controls button:disabled,.chai-lane-controls button:disabled{opacity:.55}
+.chai-rush-board{touch-action:none;user-select:none}
+.chai-lane-controls svg{width:18px;height:18px}
+
+.chai-board{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;max-width:600px;margin:0 auto}
+.chai-card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-width:0;min-height:100px;padding:8px;border:1px solid var(--border-color);border-radius:10px;background:var(--primary-color);color:var(--button-text-color);font:700 27px Poppins,sans-serif;cursor:pointer;touch-action:manipulation}
+.chai-card.is-open{background:var(--color-surface-green);color:var(--primary-color)}
+.chai-card.is-matched{border-color:var(--accent-color);background:var(--secondary-background-color)}
+.chai-card small{font:600 10px Poppins,sans-serif}
+.chai-card:disabled{cursor:default}
+.chai-hard{grid-template-columns:repeat(4,minmax(0,1fr))}
+
+.quiz-game{max-width:650px}
+.quiz-status{display:flex;justify-content:space-between;gap:10px;color:var(--secondary-text-color);font:600 12px Poppins,sans-serif}
+.quiz-question{display:flex;flex-direction:column;align-items:center;gap:8px;padding:15px 8px 18px;text-align:center}
+.quiz-face{font-size:clamp(52px,16vw,78px);line-height:1.1}
+.quiz-question h4{max-width:540px;margin:0;color:var(--text-color);font:600 15px/1.6 Poppins,"Tiro Devanagari Hindi",sans-serif}
+.quiz-answers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.quiz-answer{display:flex;align-items:center;gap:9px;min-width:0;min-height:52px;padding:9px 12px;border:1px solid var(--border-color);border-radius:8px;background:var(--surface-color);color:var(--text-color);font:500 11px/1.5 Poppins,"Tiro Devanagari Hindi",sans-serif;text-align:left;cursor:pointer;touch-action:manipulation}
+.quiz-answer>span{display:grid;flex:0 0 26px;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--color-surface-green);color:var(--primary-color);font-weight:700}
+.quiz-answer:disabled{cursor:default}
+.quiz-answer.correct{border-color:var(--primary-color);background:var(--color-surface-green)}
+.quiz-answer.incorrect{border-color:var(--notification-alert-color);background:color-mix(in srgb,var(--notification-alert-color) 8%,var(--surface-color))}
+.quiz-feedback{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:14px;color:var(--primary-color);font:600 13px Poppins,"Tiro Devanagari Hindi",sans-serif}
+.quiz-finish{display:flex;flex-direction:column;align-items:center;gap:9px;padding:12px;text-align:center;color:var(--text-color)}
+.quiz-final-emoji{font-size:60px}
+.quiz-finish h4,.quiz-finish p{margin:0}
+.quiz-finish h4{font:700 20px Poppins,"Tiro Devanagari Hindi",sans-serif}
+.quiz-finish p{color:var(--secondary-text-color);font:500 13px/1.6 Poppins,"Tiro Devanagari Hindi",sans-serif}
+
+.tap-board{position:relative;isolation:isolate;overflow:hidden;width:min(100%,650px);height:clamp(260px,52vw,360px);margin:0 auto;border:1px solid var(--border-color);border-radius:12px;background:radial-gradient(ellipse at top,var(--surface-color),var(--secondary-background-color));touch-action:none;user-select:none}
+.chappal-target{position:absolute;display:grid;place-items:center;width:68px;height:68px;padding:0;border:2px solid var(--accent-color);border-radius:50%;background:var(--surface-color);box-shadow:0 4px 14px var(--color-card-shadow);font-size:38px;transform:translate(-50%,-50%);cursor:pointer;touch-action:manipulation}
+.chappal-target.is-tapped{transform:translate(-50%,-50%) scale(.8)}
+
+.mole-grid{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;width:min(100%,470px);margin:0 auto;touch-action:none}
+.mole-hole{display:grid;place-items:center;min-width:0;min-height:92px;border:2px solid var(--border-color);border-radius:50%;background:radial-gradient(ellipse,var(--secondary-background-color),var(--color-surface-green));color:var(--text-color);font-size:clamp(30px,7vw,42px);cursor:pointer;touch-action:manipulation}
+.mole-hole:disabled{cursor:default}
+.mole-hole.mole-visible{border-color:var(--accent-color);background:var(--surface-color);box-shadow:0 4px 12px var(--color-card-shadow)}
+
+.red-board{position:relative;isolation:isolate;overflow:hidden;width:min(100%,650px);height:clamp(260px,52vw,360px);margin:0 auto;border:1px solid var(--border-color);border-radius:12px;background:radial-gradient(ellipse at top,var(--surface-color),var(--secondary-background-color));touch-action:none}
+.red-target{position:absolute;display:grid;place-items:center;width:clamp(58px,14vw,76px);height:clamp(58px,14vw,76px);padding:0;border:3px solid var(--surface-color);border-radius:50%;box-shadow:0 4px 14px var(--color-card-shadow);color:#fff;font:700 30px Poppins,sans-serif;transform:translate(-50%,-50%);cursor:pointer;touch-action:manipulation}
+.red-target.red-target{background:var(--notification-alert-color)}
+.red-target.green-target{background:var(--whatsapp-color)}
+
+.runner-board-wrap{position:relative;overflow:hidden;width:min(100%,700px);margin:0 auto;border:1px solid var(--border-color);border-radius:12px;background:var(--secondary-background-color)}
+.runner-board{display:block;width:100%;height:clamp(210px,42vw,285px);touch-action:none;user-select:none}
+.runner-jump-button{min-width:112px;min-height:50px}
+
+.paisa-board-wrap{position:relative;overflow:hidden;border:1px solid var(--border-color);border-radius:12px;background:var(--secondary-background-color)}
+.paisa-board{display:block;width:100%;height:clamp(250px,50vw,360px);touch-action:none;user-select:none}
+
+@media(max-width:900px){
+  .games-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){
+  .games-grid{grid-template-columns:1fr}
+  .game-card{min-height:220px;padding:20px}
+  .game-panel{padding:16px}
+}
+@media(max-width:480px){
+  .games-heading{margin-bottom:24px}
+  .game-card{padding:18px}
+  .game-panel{padding:12px}
+  .game-panel-heading{gap:8px}
+  .game-panel-heading h3{font-size:16px}
+  .game-panel-heading h3 span{font-size:12px}
+  .game-toolbar{gap:6px}
+  .score-box{flex:1;min-width:55px;padding:6px 4px}
+  .score-box strong{font-size:13px}
+  .samosa-board{height:clamp(235px,72vw,310px)}
+  .game-touch-controls{gap:8px}
+  .game-touch-controls button{flex:1;min-width:0;min-height:52px}
+  .murgi-board,.balance-board,.chai-rush-board{height:clamp(235px,72vw,310px)}
+  .balance-controls,.chai-lane-controls{gap:8px}
+  .balance-controls button,.chai-lane-controls button{min-height:54px;padding:8px;font-size:12px}
+  .chai-board{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+  .chai-card{min-height:82px;font-size:24px}
+  .quiz-answers{grid-template-columns:1fr;gap:7px}
+  .quiz-answer{min-height:48px}
+  .tap-board{height:clamp(250px,76vw,320px)}
+  .chappal-target{width:64px;height:64px;font-size:36px}
+  .paisa-board{height:clamp(235px,72vw,310px)}
+  .mole-grid{gap:7px}
+  .mole-hole{min-height:76px;font-size:32px}
+  .red-board{height:clamp(250px,76vw,320px)}
+  .runner-board{height:clamp(210px,62vw,270px)}
+  .runner-jump-button{flex:1;min-height:58px;font-size:15px}
+}
+@media(max-width:350px){
+  .game-card h3{font-size:17px}
+  .game-toolbar{gap:4px}
+  .score-box small{font-size:8px}
+  .score-box strong{font-size:12px}
+  .game-touch-controls{gap:5px}
+  .game-touch-controls button{padding:7px;font-size:11px}
+  .chai-card{min-height:72px}
+  .mole-hole{min-height:68px}
+}
+@media(prefers-reduced-motion:reduce){
+  .game-card,.game-play-button,.game-utility-button,.game-back-button,.game-close-button,.game-primary-button{transition:none}
+}
