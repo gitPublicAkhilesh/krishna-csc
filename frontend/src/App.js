@@ -55,7 +55,12 @@ const THEME_ROTATION_ORDER = [
   "forest",
   "slate",
 ];
-const THEME_ROTATION_INTERVAL_MS = 30 * 1000;
+// Active interval: 10 seconds.
+const THEME_ROTATION_INTERVAL_MS = 10 * 1000;
+// Other interval options:
+// const THEME_ROTATION_INTERVAL_MS = 60 * 1000; // 1 minute
+// const THEME_ROTATION_INTERVAL_MS = 60 * 60 * 1000; // 1 hour
+// const THEME_ROTATION_INTERVAL_MS = 24 * 60 * 60 * 1000; // 1 day
 
 const services = [
   {
